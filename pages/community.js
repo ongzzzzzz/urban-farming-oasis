@@ -44,7 +44,7 @@ export default function Community() {
                 </div>
                 <div className="w-10/12 mx-auto my-2 flex flex-row justify-between items-center p-2 border-2 rounded-full border-slate-500">
                   {/* create post */}
-                  <div className="mx-2">What's on your mind?</div>
+                  <div className="mx-2">What&rsquo;s on your mind?</div>
                   <div className="flex flex-row items-center">
                     <FontAwesomeIcon icon={faImage} className="m-2" />
                     <div className="mx-2">⋮</div>
