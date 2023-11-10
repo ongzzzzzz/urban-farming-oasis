@@ -1,9 +1,6 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import NavBar from '../components/navbar';
 import { Camera } from "react-camera-pro";
 import { useState, useRef } from 'react';
-import { math } from '@tensorflow/tfjs';
 import Result from './components/scan-result';
 
 export default function Scan() {
@@ -17,7 +14,6 @@ export default function Scan() {
   const next_pred_pls = ()=>{
     setPrediction(false)
   }
-
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
