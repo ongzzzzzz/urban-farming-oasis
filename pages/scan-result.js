@@ -16,7 +16,7 @@ export default function Result() {
         <div className="w-10/12 text-left py-2 px-4">
           <div className="text-lg">Comments:</div>
           <ul className="list-disc list-inside">
-            <li>50-70days from planting seeds to reach maturity and get ready to harvest!</li>
+            <li>50-70 days from planting seeds to reach maturity and get ready to harvest!</li>
             <li>Adequate sunlight, warmth, consistent watering, and good soil fertility are crucial.</li>
           </ul>
         </div>
