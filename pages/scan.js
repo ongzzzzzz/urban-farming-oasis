@@ -1,19 +1,20 @@
 import NavBar from '../components/navbar';
-import { Camera } from "react-camera-pro";
-import { useState, useRef } from 'react';
+import { Camera, getNumbersOfCamera } from "react-camera-pro";
+import { useState, useRef, useEffect } from 'react';
 import Result from './components/scan-result';
 
 export default function Scan() {
-// Ambatukamehameha
+  // Ambatukamehameha
   const camera = useRef(null);
   const [image, setImage] = useState(null);
   const [taken, setTaken] = useState(false);
   const [loading, setLoading] = useState(false);
   const [prediction, setPrediction] = useState(false);
 
-  const next_pred_pls = ()=>{
+  const next_pred_pls = () => {
     setPrediction(false)
   }
+
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
@@ -50,6 +51,7 @@ export default function Scan() {
     }
   };
 
+
   return (
     <>
       {!prediction ? <div style={{ height: "calc(100vh - 70px)", backgroundColor: "#FAF4DF" }}
@@ -58,7 +60,7 @@ export default function Scan() {
         <div className="w-11/12 font-bold text-center">Place soil in camera view to determine the most suitable type of crop to plant!</div>
 
         <div style={{ display: !taken ? "block" : "none" }} className="w-11/12 my-2">
-          <Camera ref={camera} aspectRatio={1 / 1}/>
+          <Camera ref={camera} aspectRatio={1 / 1} />
         </div>
         <div style={{ display: !taken ? "none" : "block" }} className="w-11/12 my-2">
           <img src={image} alt='Taken photo' />
@@ -72,6 +74,14 @@ export default function Scan() {
         >
           {!taken ? "Take Photo" : "Retake Photo"}
         </button>
+        <button
+          className="text-white bg-slate-600 px-2 py-1 rounded-md"
+          onClick={() => {
+            if (camera.current) {
+              camera.current.switchCamera();
+            }
+          }}
+        >Switch Camera</button>
 
         <form>
           <input type="file" name="file" accept="image/*" onChange={handleImageChange} required />
@@ -85,7 +95,7 @@ export default function Scan() {
         >
           {loading ? "Thinking..." : "Get Crop Recommendation"}
         </button>
-      </div> : <Result soil_type={prediction['soil_type']} soil_desc={prediction['soil_description']} crops={prediction['crops']} start_next_pred={next_pred_pls}/>}
+      </div> : <Result soil_type={prediction['soil_type']} soil_desc={prediction['soil_description']} crops={prediction['crops']} start_next_pred={next_pred_pls} />}
       <NavBar />
     </>
   )
