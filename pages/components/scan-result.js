@@ -27,8 +27,8 @@ export default function Result({ soil_type, soil_desc, crops, start_next_pred })
                 <div className="text-lg">Example crops:</div>
                 <ul className="list-disc list-inside">
                   {
-                    crop["examples"].map((example) => {
-                      return <li>{example}</li>
+                    crop["examples"].map((example, j) => {
+                      return <li key={j}>{example}</li>
                     })
                   }
                 </ul>
