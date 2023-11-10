@@ -38,8 +38,9 @@ export default function Scan() {
         }}
           hidden={numberOfCameras <= 1}
           className="text-white bg-slate-600 px-2 py-1 rounded-md my-2"
-
-        />
+        >
+          Switch Camera
+        </button>
         <Link href="/scan-result"
           className="text-white bg-slate-600 px-2 py-1 rounded-md"
         >Process Image</Link>
