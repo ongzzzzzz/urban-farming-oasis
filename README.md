@@ -1,14 +1,18 @@
 # Pages
 - soil classification
-  - crop recommendation
+  - crop recommendation (This feature is heavily depended on a (AI Inference Server)[https://github.com/Programmer420-1/urban-farming-oasis-model], please refer to the README.md in the repo for server setup and testing.)
 - marketplace
 - community
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+First, install all the dependencies:
+```bash
+npm i
+```
 
-First, run the development server:
+Then, run the development server:
 
 ```bash
 npm run dev
