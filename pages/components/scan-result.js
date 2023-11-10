@@ -2,7 +2,7 @@ import Image from 'next/image'
 import NavBar from '../../components/navbar';
 
 export default function Result({ soil_type, soil_desc, crops, start_next_pred }) {
-
+// Ambatukamehameha
   return (
     <>
       <div style={{ backgroundColor: "#FAF4DF" }}

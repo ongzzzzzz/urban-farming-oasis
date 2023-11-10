@@ -4,7 +4,7 @@ import { useState, useRef } from 'react';
 import Result from './components/scan-result';
 
 export default function Scan() {
-
+// Ambatukamehameha
   const camera = useRef(null);
   const [image, setImage] = useState(null);
   const [taken, setTaken] = useState(false);
