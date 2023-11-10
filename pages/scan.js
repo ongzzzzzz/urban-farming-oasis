@@ -58,7 +58,7 @@ export default function Scan() {
         <div className="w-11/12 font-bold text-center">Place soil in camera view to determine the most suitable type of crop to plant!</div>
 
         <div style={{ display: !taken ? "block" : "none" }} className="w-11/12 my-2">
-          <Camera ref={camera} aspectRatio={1 / 1} />
+          <Camera ref={camera} aspectRatio={1 / 1} numberOfCamerasCallback={setNumberOfCameras} />
         </div>
         <div style={{ display: !taken ? "none" : "block" }} className="w-11/12 my-2">
           <img src={image} alt='Taken photo' />
